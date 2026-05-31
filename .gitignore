@@ -1,0 +1,7 @@
+node_modules/
+bin/
+pkg/
+.fastly-token.dpapi
+.fastly-deploy-state.json
+build-profile-fastly-*.txt
+*.wasm
