@@ -1,0 +1,8 @@
+manifest_version = 3
+name             = "relay-b04csk78"
+description      = "XHTTPRelayECO Fastly Compute relay"
+authors          = ["Behnam"]
+language         = "javascript"
+
+[scripts]
+build = "npm run build"
