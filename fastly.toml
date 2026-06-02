@@ -1,8 +1,16 @@
 manifest_version = 3
-name             = "relay-b04csk78"
-description      = "XHTTPRelayECO Fastly Compute relay"
-authors          = ["Behnam"]
-language         = "javascript"
+name = "relay-b04csk78"
+description = "XHTTPRelayECO Fastly Compute"
+authors = ["Behnam"]
+language = "javascript"
 
 [scripts]
 build = "npm run build"
+
+[setup]
+name = "XHTTP Relay on Fastly"
+type = "compute"
+[setup.fields]
+TARGET_BASE = { type = "string", title = "Target Base URL", description = "Your inbound server URL (e.g., https://your-domain.com:2053)", required = true }
+RELAY_PATH = { type = "string", title = "Relay Path", description = "Path on your inbound server (e.g., /api)", required = true, default = "/api" }
+TARGET_HOSTNAME = { type = "string", title = "Target Hostname", description = "Hostname of your inbound server", required = true }
